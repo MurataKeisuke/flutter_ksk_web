@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_ksk_web/src/welcome_screen.dart';
+import 'package:flutter_ksk_web/src/theme.dart';
+import 'package:flutter_ksk_web/src/home_screen.dart';
 
 class App extends StatelessWidget {
   // This widget is the root of your application.
@@ -8,12 +9,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        brightness: Brightness.light,
-        primarySwatch: Colors.orange,
-        canvasColor: Colors.transparent,
-      ),
-      home: const WelcomeScreen(title: 'Flutter Demo Home Page'),
+      theme: lightTheme,
+      home: const HomeScreen(title: 'Flutter Demo Home Page'),
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
